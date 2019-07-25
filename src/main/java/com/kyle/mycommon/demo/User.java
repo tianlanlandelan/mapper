@@ -13,7 +13,7 @@ import java.util.Date;
  * 用户实体类，对应user_info表
  */
 @TableAttribute("user_info")
-public class UserEntity extends BaseEntity {
+public class User extends BaseEntity {
     /**
      * id
      */
@@ -104,7 +104,7 @@ public class UserEntity extends BaseEntity {
 
     @Override
     public String toString() {
-        return "UserEntity{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", gender=" + gender +

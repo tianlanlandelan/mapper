@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Mapper;
  * UserMapper 映射到UserEntity对象
  */
 @Mapper
-public interface UserMapper extends BaseMapper<UserEntity> {
+public interface UserMapper extends BaseMapper<User> {
 }

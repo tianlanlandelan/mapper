@@ -17,55 +17,56 @@ public class UserController {
 
     @PostMapping("insert")
     public Object insert(String name,String phone,String email){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setName(name);
-        userEntity.setPhone(phone);
-        userEntity.setEmail(email);
-        userMapper.baseInsertAndReturnKey(userEntity);
-        return userEntity;
+        User user = new User();
+        user.setName(name);
+        user.setPhone(phone);
+        user.setEmail(email);
+        userMapper.baseInsertAndReturnKey(user);
+        return user;
     }
 
     @GetMapping("getById")
     public Object getUserInfo(Integer id){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setId(id);
-        return userMapper.baseSelectById(userEntity);
+        User user = new User();
+        user.setId(id);
+        return userMapper.baseSelectById(user);
     }
 
     @GetMapping("getByPhone")
     public Object getByPhone(String phone){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setPhone(phone);
-        return userMapper.baseSelectByCondition(userEntity);
+        User user = new User();
+        user.setPhone(phone);
+        return userMapper.baseSelectByCondition(user);
     }
     @GetMapping("getByPhoneAndEmail")
     public Object getByPhoneAndEmail(String phone,String email){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setPhone(phone);
-        userEntity.setEmail(email);
-        userEntity.setBaseKyleUseAnd(true);
-        return userMapper.baseSelectByCondition(userEntity);
+        User user = new User();
+        user.setPhone(phone);
+        user.setEmail(email);
+        user.setBaseKyleUseAnd(true);
+        return userMapper.baseSelectByCondition(user);
     }
     @GetMapping("getByPhoneOrEmail")
     public Object getByPhoneOrEmail(String phone,String email){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setPhone(phone);
-        userEntity.setEmail(email);
-        userEntity.setBaseKyleUseAnd(false);
-        return userMapper.baseSelectByCondition(userEntity);
+        User user = new User();
+        user.setPhone(phone);
+        user.setEmail(email);
+        user.setBaseKyleUseAnd(false);
+        return userMapper.baseSelectByCondition(user);
     }
 
     @GetMapping("getPageList")
     public Object getPageList(){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setBaseKylePageSize(2);
-        return userMapper.baseSelectPageList(userEntity);
+        User user = new User();
+        user.setBaseKylePageSize(2);
+        user.setBaseKyleUseASC(true);
+        return userMapper.baseSelectPageList(user);
     }
 
     @GetMapping("getCount")
     public Object getCount(){
-        UserEntity userEntity = new UserEntity();
-        return userMapper.baseSelectCount(userEntity);
+        User user = new User();
+        return userMapper.baseSelectCount(user);
     }
 
 
