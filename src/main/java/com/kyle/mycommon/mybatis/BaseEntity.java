@@ -12,7 +12,7 @@ public class BaseEntity {
     /**
      * 多个查询条件是否用And连接
      */
-    private Boolean baseKyleUseAnd;
+    private Boolean baseKyleUseAnd = true;
     /**
      * 是否按排序关键字升序排列
      */

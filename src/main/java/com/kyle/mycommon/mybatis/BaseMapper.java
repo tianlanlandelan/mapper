@@ -20,6 +20,7 @@ import java.util.List;
  * @param <K>
  */
 public interface BaseMapper<K> {
+
     /**
      * 插入操作
      * 将实体类的所有字段和字段的值分别列出来，适用于主键不是自增的表
