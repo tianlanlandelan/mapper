@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.keller</groupId>
-    <artifactId>common</artifactId>
+    <artifactId>mapper</artifactId>
     <version>0.0.1</version>
-    <description>通用组件</description>
+    <description>MyBatis通用Mapper</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -40,70 +40,18 @@
             <version>1.2.51</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator
-        图片压缩-->
-        <dependency>
-            <groupId>net.coobird</groupId>
-            <artifactId>thumbnailator</artifactId>
-            <version>0.4.8</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.drewnoakes/metadata-extractor
-        用于处理图片的Exif信息-->
-        <dependency>
-            <groupId>com.drewnoakes</groupId>
-            <artifactId>metadata-extractor</artifactId>
-            <version>2.11.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-api</artifactId>
-            <version>0.11.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>0.11.1</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.1</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- 用于支持RabbitMQ -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--Spring Cloud Consul-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-            <version>2.1.1.RELEASE</version>
-        </dependency>
 
-        <!--Spring Cloud Consul 健康检查依赖包-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
-        <finalName>kellerCommon</finalName>
+        <finalName>kellerMapper</finalName>
         <directory>
-            /Users/yangkaile/jars/common/kellerCommon/
+            /Users/yangkaile/jars/kellerMapper/
         </directory>
     </build>
 
