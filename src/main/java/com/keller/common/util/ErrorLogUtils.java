@@ -1,10 +1,7 @@
 package com.keller.common.util;
 
-import com.alibaba.fastjson.JSON;
-
 import com.keller.common.config.Constants;
-import com.keller.common.config.MqConstants;
-import com.keller.common.entity.ErrorLog;
+
 import com.keller.common.http.RequestUtil;
 import com.keller.common.http.ResponseUtils;
 import com.keller.common.http.ResultData;
@@ -62,21 +59,7 @@ public class ErrorLogUtils {
             Console.info("http requestSuccessLog",ip,method,url,params,response.getBody());
             return;
         }
-        ErrorLog log = new ErrorLog();
-        log.setType(REQUEST_ERROR);
-        log.setIp(ip);
-        log.setMethod(method);
-        log.setUrl(url);
-        StringBuilder builder = new StringBuilder();
-        if(params != null){
-            for(String key : params.keySet()){
-                builder.append(key).append(":").append(params.get(key)).append(",");
-            }
-        }
-        log.setParams(builder.toString());
-        log.setMessage(resultData.getMessage());
-
-        rabbitTemplate.convertAndSend(MqConstants.ERROR_LOG,JSON.toJSONString(log));
+        Console.info("http requestErrorLog",ip,method,url,params,response.getBody());
     }
 
     /**
@@ -89,7 +72,6 @@ public class ErrorLogUtils {
      */
     public void sendErrorLog(Exception e){
         e.printStackTrace();
-        ErrorLog log = new ErrorLog(SYSTEM_ERROR);
         // 获取项目包名，只记录项目代码中的异常信息，不记录JVM的异常
         String packageName = Constants.packageName;
         // 遍历异常
@@ -102,21 +84,15 @@ public class ErrorLogUtils {
                 builder.append(element.toString()).append(",");
             }
         }
-        log.setMessage(builder.toString());
-
-        rabbitTemplate.convertAndSend(MqConstants.ERROR_LOG,JSON.toJSONString(log));
+        Console.info("sendErrorLog",builder.toString());
     }
 
     /**
      *
      * @param request
      */
-    public static String getAccessErrorLog(HttpServletRequest request){
-        ErrorLog log = new ErrorLog(ACCESS_ERROR);
-        log.setIp(RequestUtil.getRealIp(request));
-        log.setUrl(request.getRequestURI());
-        log.setMethod(request.getMethod());
-        return JSON.toJSONString(log);
+    public static void getAccessErrorLog(HttpServletRequest request){
+        Console.info("getAccessErrorLog",RequestUtil.getRealIp(request),request.getRequestURI(),request.getMethod());
     }
 
 }

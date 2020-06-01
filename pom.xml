@@ -103,7 +103,7 @@
     <build>
         <finalName>kellerCommon</finalName>
         <directory>
-            /Users/yangkaile/jars/kellerCommon/
+            /Users/yangkaile/jars/common/kellerCommon/
         </directory>
     </build>
 

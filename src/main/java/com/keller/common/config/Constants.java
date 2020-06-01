@@ -28,55 +28,11 @@ public class Constants {
         return userType == DEFAULT_USER_TYPE || userType == ADMIN_USER_TYPE;
     }
 
-    /**
-     * 业务成功标示
-     */
-    public static final int SUCCESS  = 0;
-    /**
-     * 业务失败标示
-     */
-    public static final int FAILED = 1;
-
-    /**
-     * 注册类型
-     */
-    public static final int REGISTER_TYPE = 0;
-
-    /**
-     * 登录类型
-     */
-    public static final int LOGIN_TYPE = 1;
-
-    /**
-     * 重置密码类型
-     */
-    public static final int RESET_PASSWORD_TYPE = 2;
-
-    /**
-     * 邮件验证码有效期
-     */
-    public static final int EMAIL_CODE_TIME = 5;
-
-    /**
-     * 邮件验证码长度
-     */
-    public static final int EMAIL_CODE_LENGTH = 6;
 
     /**
      * JWT 有效时间 12 小时
      */
     public static final long JWT_EXP_TIME = 12 * 60 * 60 * 1000;
-
-
-    /**
-     * 应用启动的端口号
-     */
-    public static String port ;
-
-    /**
-     * 本地IP
-     */
-    public static final String localIp = "127.0.0.1";
 
 
     /**
@@ -119,14 +75,7 @@ public class Constants {
      * 缩略图保存路径
      */
     public static String thumbnailPath = "thum/";
-    /**
-     * web 访问地址
-     */
-    public static String webUrl;
 
-    public static final String DEFAULT_NOTES_NAME = "默认笔记本";
-
-    public static final int DEFAULT_NOTES_STATUS = 1;
 
     /**
      * 头像的前缀名
@@ -153,16 +102,6 @@ public class Constants {
      */
     public static final int THUM_MAX_HEIGHT = 120;
 
-    /**
-     * 富文本笔记类型
-     */
-    public static final int NOTE_TYPE_RICH_TEXT = 0;
-
-
-    /**
-     * MarkDown 笔记类型
-     */
-    public static final int NOTE_TYPE_MARK_DOWN = 1;
 
     /**
      * 用户id参数固定名称，不接收外部传入的用户id
