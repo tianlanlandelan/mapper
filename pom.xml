@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.keller</groupId>
-    <artifactId>common-util</artifactId>
-    <version>0.0.1</version>
-    <name>common-util</name>
+    <groupId>com.code4j</groupId>
+    <artifactId>mybatis-util</artifactId>
+    <version>2.0.0</version>
+    <name>mybatis-util</name>
     <description>通用工具组件，该组件与项目无关，封装通用方法，可以在所有项目中使用</description>
 
     <properties>
