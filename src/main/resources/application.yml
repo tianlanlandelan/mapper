@@ -1,0 +1,21 @@
+spring:
+  application:
+    #服务名
+    name: Dictionary
+
+  datasource:
+    #mysql连接地址
+    url: jdbc:mysql://localhost:3306/chengyu?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+    #mysql用户名
+    username: root
+    #mysql密码
+    password: 123456
+
+server:
+  # 服务端口号
+  port: 8801
+
+mybatis:
+  configuration:
+    # 开启MyBatis数据库字段名到Java属性名的映射（下划线转驼峰）
+    map-underscore-to-camel-case: true
