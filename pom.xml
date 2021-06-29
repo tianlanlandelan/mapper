@@ -74,7 +74,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>common-util</finalName>
+        <finalName>mybatis-util</finalName>
     </build>
 
 </project>

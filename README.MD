@@ -100,7 +100,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 添加数据
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
         user.setName("张三");
 
@@ -112,7 +112,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 批量添加
 
 ```java
-				List<UserInfo> list = new ArrayList<>();
+        List<UserInfo> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             UserInfo user = new UserInfo();
             user.setId(10 + i);
@@ -128,7 +128,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 保存数据
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
         user.setName("张三save");
 
@@ -142,7 +142,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 删除数据
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
 
         Integer result = userInfoMapper.baseDeleteById(user);
@@ -155,7 +155,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 更新数据
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
         user.setName("Name");
         Integer result = userInfoMapper.baseUpdateById(user);
@@ -166,7 +166,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 部分更新
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
         Integer result = userInfoMapper.baseUpdateById(user);
 ```
@@ -178,7 +178,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 根据ID查询
 
 ```java
-			 	UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setId(1);
 
         UserInfo result = userInfoMapper.baseSelectById(user);
@@ -189,7 +189,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 查询列表
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         BaseQuery<UserInfo> query = new BaseQuery<>(user);
         List<UserInfo> result = userInfoMapper.baseSelectList(query);
 ```
@@ -199,7 +199,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 分页查询列表
 
 ```java
-				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setName("张三");
         BaseQuery<UserInfo> query = new BaseQuery<>(user);
         List<UserInfo> result = userInfoMapper.baseSelectPageList(query);
@@ -210,7 +210,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 分页查询
 
 ```java
- 				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setName("张三");
         BaseQuery<UserInfo> query = new BaseQuery<>(user);
         BasePage<UserInfo> result = userInfoMapper.baseSelectPage(query);
@@ -221,7 +221,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo>{
 ##### 统计总数
 
 ```java
- 				UserInfo user = new UserInfo();
+        UserInfo user = new UserInfo();
         user.setName("张三");
         BaseQuery<UserInfo> query = new BaseQuery<>(user);
         Integer result = userInfoMapper.baseSelectCount(query);
